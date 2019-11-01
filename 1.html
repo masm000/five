@@ -1,0 +1,44 @@
+<html>
+
+<body>
+<form>
+Username:<input type="text" name="user" id="1" required><br>
+Password:<input type="password" name="pass" id="2" required><br>
+Confirm Password:<input type="password" name="pass" id="3" required><br>
+
+<input type="submit" name="submit">
+</form>
+</body>
+
+<script type="text/javascript">
+	user=document.getElementById("1");
+	pass2=document.getElementById("2");
+	pass3=document.getElementById("3");
+	user.onkeyup=function(){
+		if(user.value.length>8){
+			alert("user name should be 8 charactor long");
+		}
+		  var number=/[0-9]/g;
+		if(user.value.match(number)){
+			alert("UserName Doestn't contain numbers ");
+		}
+}
+
+pass2.onkeyup=function(){
+
+	if(pass2.value.length>5){
+		alert("Password should be in 5 charactor long");
+	}
+}
+pass3.onkeyup=function(){
+
+	if(pass2.value!=pass3.value){
+		alert("Confirm password is incorrect");
+	}
+}
+		
+
+	
+</script>
+
+</html>
